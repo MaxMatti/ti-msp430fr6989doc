@@ -28,12 +28,12 @@ RESET       mov.w   #__STACK_END,SP         ; Initialize stackpointer
             bis.b   #00000110b,&P1IE        ; Activate Interrupt Handling for Btn1&2
 
             mov.w   #0x0CA7,LCDCCTL0        ; Sets LCD frequency divider Bit to LCDDIV_1,
-                                                            ;Sets LCD frequency pre-scaler Bit to LCDPRE_4
-                                                            ;Selects clock 1
-                                                            ;Sets Mux Rate Bit 2 to  1 (Mux Rate Bit 0 and 1 are 0)
-                                                            ;Turns the LCD_C Semgents ON
-                                                            ;Selects Low Power Waveform
-                                                            ;Turns on the LCD
+                                            ; Sets LCD frequency pre-scaler Bit to LCDPRE_4
+                                            ; Selects clock 1
+                                            ; Sets Mux Rate Bit 2 to  1 (Mux Rate Bit 0 and 1 are 0)
+                                            ; Turns the LCD_C Semgents ON
+                                            ; Selects Low Power Waveform
+                                            ; Turns on the LCD
             mov.w   #0x00C1,LCDCCTL1        ; Sets Frame interrupt Flag
             mov.w   #0x0608,LCDCVCTL        ; Sets VLCD to VLCD_3 and enables Charge Pump
             mov.w   #0xFFFF,LCDCPCTL0       ; Enabling Segments 1-15
